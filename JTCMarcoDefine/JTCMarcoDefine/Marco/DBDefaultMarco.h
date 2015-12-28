@@ -39,7 +39,11 @@
 //-----------------iOS型号---------------------
 #define iOS     [[UIDevice currentDevice] model]
 
-//-----------------是否iPad--------------------
+//-----------------设备类型--------------------
+#define iPhone4 ([UIScreen mainScreen].bounds.size.height == 480)
+#define iPhone5 ([UIScreen mainScreen].bounds.size.height == 568)
+#define iPhone6 ([UIScreen mainScreen].bounds.size.height == 667 && [UIScreen mainScreen].bounds.size.width == 375 )
+#define iPhone6p ([UIScreen mainScreen].bounds.size.height == 736 && [UIScreen mainScreen].bounds.size.width == 414 )
 #define isPad   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad   ? YES : NO)
 
 //-----------------参看版本------------------------
